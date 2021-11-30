@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" id="viewport"
+        content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0" />
+    <title>Cherish The Love - Invitation</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <meta name="description" content="Invitation">
+    <meta name="author" content="Radinal - WIT>ID">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+</head>
+
+<body>
+
+    <button id="play-button" onclick="playvideo()"
+        style="position: absolute; height: 100%; width: 100%; z-index: 9999; opacity: 0;"></button>
+    <video id="scene-1" class="scene-1" style="opacity: 1;">
+        <source src="assets/motion/01_INTRO.mp4" type="video/mp4" width="100%">
+    </video>
+    <video id="scene-2" class="scene scene-2">
+        <source src="assets/motion/02_FOREST.mp4" type="video/mp4">
+    </video>
+    <video id="scene-3" class="scene scene-3">
+        <source src="assets/motion/03_FLOWER.mp4" type="video/mp4">
+    </video>
+    <div id="button-container-1" style="display: none">
+        <img id="tooltip" src="assets/tap.png">
+        <button onclick="nextslide1()" id="button-1" class="button button-next"></button>
+    </div>
+    <video id="scene-3-idle" class="scene scene-3">
+        <source src="assets/motion/03_FLOWER_IDLE.mp4" type="video/mp4">
+    </video>
+    <video id="scene-3-transition" class="scene scene-3">
+        <source src="assets/motion/03_FLOWER_TRANSITION.mp4" type="video/mp4">
+    </video>
+    <video id="scene-4" class="scene scene-4">
+        <source src="assets/motion/scene-4.mp4" type="video/mp4">
+    </video>
+    <video id="scene-5" class="scene scene-5">
+        <source src="assets/motion/05_MRMOONLIGHT_INTRO.mp4" type="video/mp4">
+    </video>
+    <div id="button-container-2" style="display: none">
+        <img id="tooltip2" src="assets/tap-right.png">
+        <button onclick="nextslide2()" id="button-2" class="button button-next"></button>
+    </div>
+    <video id="scene-5-idle" class="scene scene-5">
+        <source src="assets/motion/05_MRMOONLIGHT_IDLE.mp4" type="video/mp4">
+    </video>
+    <video id="scene-5-transition" class="scene scene-5">
+        <source src="assets/motion/05_MRMOONLIGHT_TRANSITION.mp4" type="video/mp4">
+    </video>
+    <video id="scene-6" class="scene scene-6">
+        <source src="assets/motion/7_JEMURAN.mp4" type="video/mp4">
+    </video>
+    <div id="button-container-3" style="display: none">
+        <img id="tooltip3" src="assets/tap-right.png">
+        <button onclick="nextslide3()" id="button-3" class="button button-next"></button>
+    </div>
+    <video id="scene-7-idle" class="scene scene-7">
+        <source src="assets/motion/7_JEMURAN_IDLE.mp4" type="video/mp4">
+    </video>
+    <video id="scene-7-spinning" class="scene scene-7">
+        <source src="assets/motion/8_JEMURAN SPINNING.mp4" type="video/mp4">
+    </video>
+
+    <section id="confirmation" style="display: none;">
+        <div class="row">
+            <div class="col col-12">
+                <p class="title">
+                    Are you willing to be
+                    Chèrish’s color?
+                </p>
+            </div>
+            <div class="col col-12" align="center">
+                <button onclick="confirm()" class="btn primary">With my pleasure!</button>
+            </div>
+            <div class="col col-12" align="center">
+                <button onclick="denied()" class="btn secondary">Maybe next time.</button>
+            </div>
+        </div>
+    </section>
+
+    <video id="scene-9-spinning" class="scene scene-9">
+        <source src="assets/motion/9_SPINNING_IDLE.mp4" type="video/mp4">
+    </video>
+
+    <section id="catalogue" style="display:none; background:#fff; height: 100vh">
+        <div class="row">
+            <div class="col-12">
+                <p class="title">
+                    Choose the outfit
+                    you will wear for the event
+                </p>
+            </div>
+            <div class="col col-12" style="height: 25vh;">
+
+                <a id="myBtn" href="#" onclick="">
+
+                    <div id="plusbtn" class="plusbtn">
+                        <img class="plus" src="assets/plus.png">
+                        <p class="pluscapt">
+                            Choose your<br>
+                            first set
+                        </p>
+                    </div>
+
+                    <div id="mainbasictees" class="basictees col py-5 col-6 product-card result">
+
+                        <img id="mainbasicteesimg" class="catalogue-list" src="assets/1.png">
+                        <p>
+                            Basic Tees
+                        </p>
+
+                    </div>
+                    <div id="maincrewneck" class="crewneck col py-5 col-6 product-card result">
+
+                        <img id="maincrewneckimg" class="catalogue-list" src="assets/2.png">
+                        <p>
+                            Crewneck Eco prod
+                            & Dynemite
+                        </p>
+
+                    </div>
+                    <div id="mainSS" class="SS col py-5 col-6 product-card result">
+
+                        <img id="mainSSimg" class="catalogue-list" src="assets/4.png">
+                        <p>
+                            SS (Forever Color
+                            & CYC)
+                        </p>
+
+                    </div>
+                    <div id="mainLS" class="LS col py-5 col-6 product-card result">
+
+                        <img id="mainLSimg" class="catalogue-list" src="assets/3.png">
+                        <p>
+                            LS (Straight Pants) - CYC/NC
+                        </p>
+
+                    </div>
+                    <div id="mainLSforever" class="LSforever col py-5 col-6 product-card result">
+
+                        <img id="mainLSforeverimg" class="catalogue-list" src="assets/5.png">
+                        <p>
+                            LS (Jogger Pants) Forever/CYC
+                        </p>
+
+                    </div>
+                    <div id="mainjogger" class="jogger col py-5 col-6 product-card result">
+
+                        <img id="mainjoggerimg" class="catalogue-list" src="assets/6.png">
+                        <p>
+                            Jogger Dynemite
+                        </p>
+
+                    </div>
+
+                </a>
+
+                <div id="myModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div id="myModalContent" class="modal-content">
+                        <span class="close">&times;</span>
+                        <p class="title">
+                            1st SET
+                        </p>
+                        <div class="row full" style="flex-direction: row;">
+                            <a id="basictees" class="col py-5 col-6 product-card">
+
+                                <img class="catalogue-list" src="assets/1.png">
+                                <p>
+                                    Basic Tees
+                                </p>
+
+                            </a>
+                            <a id="crewneck" class="col py-5 col-6 product-card">
+
+                                <img class="catalogue-list" src="assets/2.png">
+                                <p>
+                                    Crewneck Eco prod
+                                    & Dynemite
+                                </p>
+
+                            </a>
+                        </div>
+                        <div class="row full" style="flex-direction: row;">
+                            <a id="SS" class="col py-5 col-6 product-card">
+
+                                <img class="catalogue-list" src="assets/4.png">
+                                <p>
+                                    SS (Forever Color
+                                    & CYC)
+                                </p>
+
+                            </a>
+                            <a id="LS" class="col py-5 col-6 product-card">
+
+                                <img class="catalogue-list" src="assets/3.png">
+                                <p>
+                                    LS (Straight Pants) - CYC/NC
+                                </p>
+
+                            </a>
+                        </div>
+                        <div class="row full" style="flex-direction: row;">
+                            <a id="LSforever" class="col py-5 col-6 product-card">
+
+                                <img class="catalogue-list" src="assets/5.png">
+                                <p>
+                                    LS (Jogger Pants) Forever/CYC
+                                </p>
+
+                            </a>
+                            <a id="jogger" class="col py-5 col-6 product-card">
+
+                                <img class="catalogue-list" src="assets/6.png">
+                                <p>
+                                    Jogger Dynemite
+                                </p>
+
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div id="detailmodal" class="detailmodal">
+                    <span class="closes">
+                        <svg width="25" height="15" viewBox="0 0 59 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M56 21.5C57.3807 21.5 58.5 20.3807 58.5 19C58.5 17.6193 57.3807 16.5 56 16.5V21.5ZM1.23223 17.2322C0.255928 18.2085 0.255928 19.7915 1.23223 20.7678L17.1421 36.6777C18.1185 37.654 19.7014 37.654 20.6777 36.6777C21.654 35.7014 21.654 34.1184 20.6777 33.1421L6.53554 19L20.6777 4.85786C21.654 3.88155 21.654 2.29864 20.6777 1.32233C19.7014 0.34602 18.1185 0.34602 17.1421 1.32233L1.23223 17.2322ZM56 16.5L3 16.5V21.5L56 21.5V16.5Z"
+                                fill="black" />
+                        </svg>
+                    </span>
+                    <div id="detailbasictees" class="detailcontent">
+                        <div class="col py-5">
+
+                            <img id="basicteesimg" class="catalogue-detail" src="assets/1.png" data-set="">
+
+                            <p class="detail-title">
+                                Basic Tees
+                            </p>
+
+                            <div class="size-button flex flex-row">
+                                <span>XS</span>
+                                <span>S</span>
+                                <span>M</span>
+                                <span>L</span>
+                                <span>XL</span>
+                                <span>XXL</span>
+                            </div>
+
+                            <div class="color-button flex flex-row">
+                                <div id="coral" class="colorbtns" data-img="assets/basictees/CORAL.png"></div>
+                                <div id="irish" class="colorbtns" data-img="assets/basictees/IRISH.png"></div>
+                                <div id="latte" class="colorbtns" data-img="assets/basictees/LATTE.png"></div>
+                                <div id="onyx" class="colorbtns" data-img="assets/basictees/ONYX.png"></div>
+                                <div id="chalk" class="colorbtns" data-img="assets/basictees/CHALK.png"></div>
+                            </div>
+
+                            <div align="center">
+                                <button onclick="submitBasicTees();" class="submit-detail">SUBMIT</button>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div id="detailcrewneck" class="detailcontent">
+                        <div class="col py-5">
+
+                            <img id="crewneckimg" class="catalogue-list" src="assets/2.png">
+
+                            <p class="detail-title">
+                                Crewneck Eco prod & Dynemite
+                            </p>
+
+                            <div class="size-button flex flex-row">
+                                <span>XS</span>
+                                <span>S</span>
+                                <span>M</span>
+                                <span>L</span>
+                                <span>XL</span>
+                                <span>XXL</span>
+                            </div>
+
+                            <div class="color-button flex flex-row">
+                                <div id="youth" class="colorbtns2" data-img="assets/crewneck/YOUTH.png"></div>
+                                <div id="costal" class="colorbtns2" data-img="assets/crewneck/COSTAL.png"></div>
+                                <div id="koya" class="colorbtns2" data-img="assets/crewneck/KOYA.png"></div>
+                            </div>
+
+                            <div align="center">
+                                <button onclick="submitCrewNeck();" class="submit-detail">SUBMIT</button>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div id="detailSS" class="detailcontent">
+                        <div class="col py-5">
+
+                            <img id="SSimg" class="catalogue-list" src="assets/4.png">
+
+                            <p class="detail-title">
+                                SS (Forever Color
+                                & CYC)
+                            </p>
+
+                            <div class="size-button flex flex-row">
+                                <span>XS</span>
+                                <span>S</span>
+                                <span>M</span>
+                                <span>L</span>
+                                <span>XL</span>
+                                <span>XXL</span>
+                            </div>
+
+                            <div class="color-button flex flex-row">
+                                <div id="kiss" class="colorbtns3" data-img="assets/SS/KISS.png"></div>
+                                <div id="plum" class="colorbtns3" data-img="assets/SS/PLUM.png"></div>
+                                <div id="icey" class="colorbtns3" data-img="assets/SS/ICEY.png"></div>
+                                <div id="sand" class="colorbtns3" data-img="assets/SS/SAND.png"></div>
+                            </div>
+
+                            <div align="center">
+                                <button onclick="submitSS();" class="submit-detail">SUBMIT</button>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div id="detailLS" class="detailcontent">
+                        <div class="col py-5">
+
+                            <img id="LSimg" class="catalogue-list" src="assets/3.png">
+
+                            <p class="detail-title">
+                                LS (Straight Pants) - CYC/NC
+                            </p>
+
+                            <div class="size-button flex flex-row">
+                                <span>XS</span>
+                                <span>S</span>
+                                <span>M</span>
+                                <span>L</span>
+                                <span>XL</span>
+                                <span>XXL</span>
+                            </div>
+
+                            <div class="color-button flex flex-row">
+                                <div id="icey" class="colorbtns4" data-img="assets/LS/ICEY.png"></div>
+                                <div id="mochi" class="colorbtns4" data-img="assets/LS/MOCHI.png"></div>
+                                <div id="kiss" class="colorbtns4" data-img="assets/LS/KISS.png"></div>
+                                <div id="sugar" class="colorbtns4" data-img="assets/LS/SUGAR.png"></div>
+                            </div>
+
+                            <div align="center">
+                                <button onclick="submitLS();" class="submit-detail">SUBMIT</button>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div id="detailLSforever" class="detailcontent">
+                        <div class="col py-5">
+
+                            <img id="LSforeverimg" class="catalogue-list" src="assets/5.png">
+
+                            <p class="detail-title">
+                                LS (Jogger Pants) Forever/CYC
+                            </p>
+
+                            <div class="size-button flex flex-row">
+                                <span>XS</span>
+                                <span>S</span>
+                                <span>M</span>
+                                <span>L</span>
+                                <span>XL</span>
+                                <span>XXL</span>
+                            </div>
+
+                            <div class="color-button flex flex-row">
+                                <div id="icey" class="colorbtns5" data-img="assets/LSforever/ICEY.png"></div>
+                                <div id="mochi" class="colorbtns5" data-img="assets/LSforever/MOCHI.png"></div>
+                                <div id="kiss" class="colorbtns5" data-img="assets/LSforever/KISS.png"></div>
+                                <div id="plum" class="colorbtns5" data-img="assets/LSforever/PLUM.png"></div>
+                                <div id="sand" class="colorbtns5" data-img="assets/LSforever/SAND.png"></div>
+                            </div>
+
+                            <div align="center">
+                                <button onclick="submitLSforever();" class="submit-detail">SUBMIT</button>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div id="detailjogger" class="detailcontent">
+                        <div class="col py-5">
+
+                            <img id="joggerimg" class="catalogue-list" src="assets/6.png">
+
+                            <p class="detail-title">
+                                Jogger Dynemite
+                            </p>
+
+                            <div class="size-button flex flex-row">
+                                <span>XS</span>
+                                <span>S</span>
+                                <span>M</span>
+                                <span>L</span>
+                                <span>XL</span>
+                                <span>XXL</span>
+                            </div>
+
+                            <div class="color-button flex flex-row">
+                                <div id="cooky" class="colorbtns6" data-img="assets/jogger/COOKY.png"></div>
+                                <div id="shook" class="colorbtns6" data-img="assets/jogger/SHOOK.png"></div>
+                                <div id="koya" class="colorbtns6" data-img="assets/jogger/KOYA.png"></div>
+                            </div>
+
+                            <div align="center">
+                                <button onclick="submitJogger();" class="submit-detail">SUBMIT</button>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+            <div class="col col-12" style="height: 25vh;">
+
+                <a id="myBtn2" href="#" onclick="">
+
+                    <div id="plusbtn2" class="plusbtn">
+                        <img class="plus" src="assets/plus.png">
+                        <p class="pluscapt">
+                            Choose your<br>
+                            first set
+                        </p>
+                    </div>
+
+                    <div id="mainbasictees2" class="basictees col py-5 col-6 product-card result2">
+
+                        <img id="mainbasictees2img" class="catalogue-list" src="assets/1.png">
+                        <p>
+                            Basic Tees
+                        </p>
+
+                    </div>
+                    <div id="maincrewneck2" class="crewneck col py-5 col-6 product-card result2">
+
+                        <img id="maincrewneck2img" class="catalogue-list" src="assets/2.png">
+                        <p>
+                            Crewneck Eco prod
+                            & Dynemite
+                        </p>
+
+                    </div>
+                    <div id="mainSS2" class="SS col py-5 col-6 product-card result2">
+
+                        <img id="mainSS2img" class="catalogue-list" src="assets/4.png">
+                        <p>
+                            SS (Forever Color
+                            & CYC)
+                        </p>
+
+                    </div>
+                    <div id="mainLS2" class="LS col py-5 col-6 product-card result2">
+
+                        <img id="mainLS2img" class="catalogue-list" src="assets/3.png">
+                        <p>
+                            LS (Straight Pants) - CYC/NC
+                        </p>
+
+                    </div>
+                    <div id="mainLSforever2" class="LSforever col py-5 col-6 product-card result2">
+
+                        <img id="mainLSforever2img" class="catalogue-list" src="assets/5.png">
+                        <p>
+                            LS (Jogger Pants) Forever/CYC
+                        </p>
+
+                    </div>
+                    <div id="mainjogger2" class="jogger col py-5 col-6 product-card result2">
+
+                        <img id="mainjogger2img" class="catalogue-list" src="assets/6.png">
+                        <p>
+                            Jogger Dynemite
+                        </p>
+
+                    </div>
+
+                </a>
+
+                <div id="myModal2" class="modal">
+
+                    <!-- Modal content -->
+                    <div id="myModalContent2" class="modal-content">
+                        <span class="close2">&times;</span>
+                        <p class="title">
+                            2st SET
+                        </p>
+                        <div class="row full" style="flex-direction: row;">
+                            <a id="basictees2" class="col py-5 col-6 product-card">
+
+                                <img class="catalogue-list" src="assets/1.png">
+                                <p>
+                                    Basic Tees
+                                </p>
+
+                            </a>
+                            <a id="crewneck2" class="col py-5 col-6 product-card">
+
+                                <img class="catalogue-list" src="assets/2.png">
+                                <p>
+                                    Crewneck Eco prod
+                                    & Dynemite
+                                </p>
+
+                            </a>
+                        </div>
+                        <div class="row full" style="flex-direction: row;">
+                            <a id="SS2" class="col py-5 col-6 product-card">
+
+                                <img class="catalogue-list" src="assets/4.png">
+                                <p>
+                                    SS (Forever Color
+                                    & CYC)
+                                </p>
+
+                            </a>
+                            <a id="LS2" class="col py-5 col-6 product-card">
+
+                                <img class="catalogue-list" src="assets/3.png">
+                                <p>
+                                    LS (Straight Pants) - CYC/NC
+                                </p>
+
+                            </a>
+                        </div>
+                        <div class="row full" style="flex-direction: row;">
+                            <a id="LSforever2" class="col py-5 col-6 product-card">
+
+                                <img class="catalogue-list" src="assets/5.png">
+                                <p>
+                                    LS (Jogger Pants) Forever/CYC
+                                </p>
+
+                            </a>
+                            <a id="jogger2" class="col py-5 col-6 product-card">
+
+                                <img class="catalogue-list" src="assets/6.png">
+                                <p>
+                                    Jogger Dynemite
+                                </p>
+
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div id="detailmodal2" class="detailmodal">
+                    <span class="closes2">
+                        <svg width="25" height="15" viewBox="0 0 59 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M56 21.5C57.3807 21.5 58.5 20.3807 58.5 19C58.5 17.6193 57.3807 16.5 56 16.5V21.5ZM1.23223 17.2322C0.255928 18.2085 0.255928 19.7915 1.23223 20.7678L17.1421 36.6777C18.1185 37.654 19.7014 37.654 20.6777 36.6777C21.654 35.7014 21.654 34.1184 20.6777 33.1421L6.53554 19L20.6777 4.85786C21.654 3.88155 21.654 2.29864 20.6777 1.32233C19.7014 0.34602 18.1185 0.34602 17.1421 1.32233L1.23223 17.2322ZM56 16.5L3 16.5V21.5L56 21.5V16.5Z"
+                                fill="black" />
+                        </svg>
+                    </span>
+                    <div id="detailbasictees2" class="detailcontent">
+                        <div class="col py-5">
+
+                            <img id="basictees2img" class="catalogue-detail" src="assets/1.png" data-set="">
+
+                            <p class="detail-title">
+                                Basic Tees
+                            </p>
+
+                            <div class="size-button flex flex-row">
+                                <span>XS</span>
+                                <span>S</span>
+                                <span>M</span>
+                                <span>L</span>
+                                <span>XL</span>
+                                <span>XXL</span>
+                            </div>
+
+                            <div class="color-button flex flex-row">
+                                <div id="coral" class="colorbtnsmodal" data-img="assets/basictees/CORAL.png"></div>
+                                <div id="irish" class="colorbtnsmodal" data-img="assets/basictees/IRISH.png"></div>
+                                <div id="latte" class="colorbtnsmodal" data-img="assets/basictees/LATTE.png"></div>
+                                <div id="onyx" class="colorbtnsmodal" data-img="assets/basictees/ONYX.png"></div>
+                                <div id="chalk" class="colorbtnsmodal" data-img="assets/basictees/CHALK.png"></div>
+                            </div>
+
+                            <div align="center">
+                                <button onclick="submitBasicTees2();" class="submit-detail">SUBMIT</button>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div id="detailcrewneck2" class="detailcontent">
+                        <div class="col py-5">
+
+                            <img id="crewneck2img" class="catalogue-list" src="assets/2.png">
+
+                            <p class="detail-title">
+                                Crewneck Eco prod & Dynemite
+                            </p>
+
+                            <div class="size-button flex flex-row">
+                                <span>XS</span>
+                                <span>S</span>
+                                <span>M</span>
+                                <span>L</span>
+                                <span>XL</span>
+                                <span>XXL</span>
+                            </div>
+
+                            <div class="color-button flex flex-row">
+                                <div id="youth" class="colorbtnsmodal2" data-img="assets/crewneck/YOUTH.png"></div>
+                                <div id="costal" class="colorbtnsmodal2" data-img="assets/crewneck/COSTAL.png"></div>
+                                <div id="koya" class="colorbtnsmodal2" data-img="assets/crewneck/KOYA.png"></div>
+                            </div>
+
+                            <div align="center">
+                                <button onclick="submitCrewNeck2();" class="submit-detail">SUBMIT</button>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div id="detailSS2" class="detailcontent">
+                        <div class="col py-5">
+
+                            <img id="SS2img" class="catalogue-list" src="assets/4.png">
+
+                            <p class="detail-title">
+                                SS (Forever Color
+                                & CYC)
+                            </p>
+
+                            <div class="size-button flex flex-row">
+                                <span>XS</span>
+                                <span>S</span>
+                                <span>M</span>
+                                <span>L</span>
+                                <span>XL</span>
+                                <span>XXL</span>
+                            </div>
+
+                            <div class="color-button flex flex-row">
+                                <div id="kiss" class="colorbtnsmodal3" data-img="assets/SS/KISS.png"></div>
+                                <div id="plum" class="colorbtnsmodal3" data-img="assets/SS/PLUM.png"></div>
+                                <div id="icey" class="colorbtnsmodal3" data-img="assets/SS/ICEY.png"></div>
+                                <div id="sand" class="colorbtnsmodal3" data-img="assets/SS/SAND.png"></div>
+                            </div>
+
+                            <div align="center">
+                                <button onclick="submitSS2();" class="submit-detail">SUBMIT</button>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div id="detailLS2" class="detailcontent">
+                        <div class="col py-5">
+
+                            <img id="LS2img" class="catalogue-list" src="assets/3.png">
+
+                            <p class="detail-title">
+                                LS (Straight Pants) - CYC/NC
+                            </p>
+
+                            <div class="size-button flex flex-row">
+                                <span>XS</span>
+                                <span>S</span>
+                                <span>M</span>
+                                <span>L</span>
+                                <span>XL</span>
+                                <span>XXL</span>
+                            </div>
+
+                            <div class="color-button flex flex-row">
+                                <div id="icey" class="colorbtnsmodal4" data-img="assets/LS/ICEY.png"></div>
+                                <div id="mochi" class="colorbtnsmodal4" data-img="assets/LS/MOCHI.png"></div>
+                                <div id="kiss" class="colorbtnsmodal4" data-img="assets/LS/KISS.png"></div>
+                                <div id="sugar" class="colorbtnsmodal4" data-img="assets/LS/SUGAR.png"></div>
+                            </div>
+
+                            <div align="center">
+                                <button onclick="submitLS2();" class="submit-detail">SUBMIT</button>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div id="detailLSforever2" class="detailcontent">
+                        <div class="col py-5">
+
+                            <img id="LSforever2img" class="catalogue-list" src="assets/5.png">
+
+                            <p class="detail-title">
+                                LS (Jogger Pants) Forever/CYC
+                            </p>
+
+                            <div class="size-button flex flex-row">
+                                <span>XS</span>
+                                <span>S</span>
+                                <span>M</span>
+                                <span>L</span>
+                                <span>XL</span>
+                                <span>XXL</span>
+                            </div>
+
+                            <div class="color-button flex flex-row">
+                                <div id="icey" class="colorbtnsmodal5" data-img="assets/LSforever/ICEY.png"></div>
+                                <div id="mochi" class="colorbtnsmodal5" data-img="assets/LSforever/MOCHI.png"></div>
+                                <div id="kiss" class="colorbtnsmodal5" data-img="assets/LSforever/KISS.png"></div>
+                                <div id="plum" class="colorbtnsmodal5" data-img="assets/LSforever/PLUM.png"></div>
+                                <div id="sand" class="colorbtnsmodal5" data-img="assets/LSforever/SAND.png"></div>
+                            </div>
+
+                            <div align="center">
+                                <button onclick="submitLSforever2();" class="submit-detail">SUBMIT</button>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div id="detailjogger2" class="detailcontent">
+                        <div class="col py-5">
+
+                            <img id="jogger2img" class="catalogue-list" src="assets/6.png">
+
+                            <p class="detail-title">
+                                Jogger Dynemite
+                            </p>
+
+                            <div class="size-button flex flex-row">
+                                <span>XS</span>
+                                <span>S</span>
+                                <span>M</span>
+                                <span>L</span>
+                                <span>XL</span>
+                                <span>XXL</span>
+                            </div>
+
+                            <div class="color-button flex flex-row">
+                                <div id="cooky" class="colorbtnsmodal6" data-img="assets/jogger/COOKY.png"></div>
+                                <div id="shook" class="colorbtnsmodal6" data-img="assets/jogger/SHOOK.png"></div>
+                                <div id="koya" class="colorbtnsmodal6" data-img="assets/jogger/KOYA.png"></div>
+                            </div>
+
+                            <div align="center">
+                                <button onclick="submitJogger2();" class="submit-detail">SUBMIT</button>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+            <div id="catalogue-finish-div" class="col col-12" style="height: 25vh;" align="center">
+                <button class="catalogue-finish" onclick="catalogueFinish()">READY TO GO</button>
+            </div>
+        </div>
+        <div class="row" style="flex-direction: row; bottom: 0; padding: 0; position: absolute">
+            <div class="col-4" style="text-align: left; vertical-align: bottom; display: inherit;">
+                <img src="assets/flower-left.png" width="100%" style="bottom: 0; position: relative;">
+            </div>
+            <div class="col-4">
+            </div>
+            <div class="col-4" style="text-align: right; vertical-align: bottom; display: inherit;">
+                <img src="assets/flower-right.png" width="100%" style="bottom: 0; position: relative;">
+            </div>
+        </div>
+
+    </section>
+
+
+    <video id="scene-10" class="scene scene-10">
+        <source src="assets/motion/10_BARCODE_INTRO.mp4" type="video/mp4">
+    </video>
+    <div id="button-container-4" style="display: none">
+        <img id="tooltip3" src="assets/tap-right.png">
+        <button onclick="nextslide4()" id="button-4" class="button button-next"></button>
+    </div>
+    <video id="scene-10-idle" class="scene scene-10">
+        <source src="assets/motion/10_BARCODE_IDLE.mp4" type="video/mp4">
+    </video>
+    <video id="scene-10-transition" class="scene scene-10">
+        <source src="assets/motion/10_BARCODE_TRANSITION.mp4" type="video/mp4">
+    </video>
+    <video id="scene-11-transition" class="scene scene-11">
+        <source src="assets/motion/11_OUTRO_TRANSITION.mp4" type="video/mp4">
+    </video>
+    <video id="scene-11-idle" class="scene scene-11">
+        <source src="assets/motion/11_OUTRO_IDLE.mp4" type="video/mp4">
+    </video>
+
+    <script src="assets/js/buttons.js"></script>
+    <script src="assets/js/slides.js"></script>
+    <script src="assets/js/modal.js"></script>
+
+</body>
+
+</html>
