@@ -72,25 +72,25 @@ video {
 }
 
 #button-1 {
-    background-color: rgba(0, 0, 0, 0.062);
+    /* background-color: rgba(0, 0, 0, 0.062); */
     border: none !important;
     margin: auto;
 }
 
 #button-2 {
-    background-color: rgba(0, 0, 0, 0.062);
+    /* background-color: rgba(0, 0, 0, 0.062); */
     border: none !important;
     margin: auto;
 }
 
 #button-3 {
-    background-color: rgba(0, 0, 0, 0.062);
+    /* background-color: rgba(0, 0, 0, 0.062); */
     border: none !important;
     margin: auto;
 }
 
 #button-4 {
-    background-color: rgba(0, 0, 0, 0.062);
+    /* background-color: rgba(0, 0, 0, 0.062); */
     border: none !important;
     margin: auto;
 }
@@ -585,13 +585,13 @@ section {
 
 @media (max-width:414px) {
     #button-container-1 {
-        left: 21%;
-        top: 8%;
+        left: 19%;
+        top: 13%;
     }
-
+    
     #button-container-2 {
-        left: 60%;
-        top: 15%;
+        left: 51%;
+        top: 18%;
     }
 
 
@@ -601,8 +601,8 @@ section {
     }
 
     #button-container-4 {
-        left: 18%;
-        top: 20%;
+        left: 21%;
+        top: 18%;
     }
 
     #tooltip {
