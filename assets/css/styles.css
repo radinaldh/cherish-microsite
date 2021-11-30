@@ -75,24 +75,28 @@ video {
     /* background-color: rgba(0, 0, 0, 0.062); */
     border: none !important;
     margin: auto;
+    opacity: 0;
 }
 
 #button-2 {
     /* background-color: rgba(0, 0, 0, 0.062); */
     border: none !important;
     margin: auto;
+    opacity: 0;
 }
 
 #button-3 {
     /* background-color: rgba(0, 0, 0, 0.062); */
     border: none !important;
     margin: auto;
+    opacity: 0;
 }
 
 #button-4 {
     /* background-color: rgba(0, 0, 0, 0.062); */
     border: none !important;
     margin: auto;
+    opacity: 0;
 }
 
 .button:hover {
