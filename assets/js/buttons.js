@@ -46,13 +46,13 @@ function denied() {
     document.getElementById("scene-9-spinning").style.opacity = "0";
     document.getElementById("scene-11-idle").style.opacity = "1";
     document.getElementById("scene-11-idle").play();
-    
+
 }
 
-function catalogueFinish(){
+function catalogueFinish() {
     document.getElementById("scene-10").style.opacity = "1";
     document.getElementById("scene-10").play();
-    document.getElementById("catalogue").style.display = "none";    
+    document.getElementById("catalogue").style.display = "none";
 }
 
 function nextslide4() {
@@ -72,15 +72,19 @@ function submitBasicTees() {
     document.getElementById("mainLS").style.display = "none";
     document.getElementById("mainLSforever").style.display = "none";
     document.getElementById("mainjogger").style.display = "none";
-    document.getElementById("plusbtn").style.display = "none";  
+    document.getElementById("plusbtn").style.display = "none";
     document.getElementById("mainbasicteesimg").src = document.getElementById("basicteesimg").getAttribute("src");
     document.getElementById("myModal").style.display = "none";
     document.getElementById("detailmodal").style.display = "none";
+    document.getElementById("notice1").style.opacity = "1";
+    setTimeout(function () {
+        document.getElementById("notice1").style.opacity = "0";
+    }, 5000)
 
     for (var i = 0; i < divsToHide.length; i++) {
-      divsToHide[i].style.display = "none";
+        divsToHide[i].style.display = "none";
     }
-    
+
 }
 
 function submitCrewNeck() {
@@ -90,15 +94,19 @@ function submitCrewNeck() {
     document.getElementById("mainLS").style.display = "none";
     document.getElementById("mainLSforever").style.display = "none";
     document.getElementById("mainjogger").style.display = "none";
-    document.getElementById("plusbtn").style.display = "none";  
+    document.getElementById("plusbtn").style.display = "none";
     document.getElementById("maincrewneckimg").src = document.getElementById("crewneckimg").getAttribute("src");
     document.getElementById("myModal").style.display = "none";
     document.getElementById("detailmodal").style.display = "none";
+    document.getElementById("notice1").style.opacity = "1";
+    setTimeout(function () {
+        document.getElementById("notice1").style.opacity = "0";
+    }, 5000)
 
     for (var i = 0; i < divsToHide.length; i++) {
-      divsToHide[i].style.display = "none";
+        divsToHide[i].style.display = "none";
     }
-    
+
 }
 
 function submitSS() {
@@ -108,15 +116,19 @@ function submitSS() {
     document.getElementById("mainLS").style.display = "none";
     document.getElementById("mainLSforever").style.display = "none";
     document.getElementById("mainjogger").style.display = "none";
-    document.getElementById("plusbtn").style.display = "none";  
+    document.getElementById("plusbtn").style.display = "none";
     document.getElementById("mainSSimg").src = document.getElementById("SSimg").getAttribute("src");
     document.getElementById("myModal").style.display = "none";
     document.getElementById("detailmodal").style.display = "none";
+    document.getElementById("notice1").style.opacity = "1";
+    setTimeout(function () {
+        document.getElementById("notice1").style.opacity = "0";
+    }, 5000)
 
     for (var i = 0; i < divsToHide.length; i++) {
-      divsToHide[i].style.display = "none";
+        divsToHide[i].style.display = "none";
     }
-    
+
 }
 
 function submitLS() {
@@ -126,15 +138,19 @@ function submitLS() {
     document.getElementById("mainLS").style.display = "block";
     document.getElementById("mainLSforever").style.display = "none";
     document.getElementById("mainjogger").style.display = "none";
-    document.getElementById("plusbtn").style.display = "none";  
+    document.getElementById("plusbtn").style.display = "none";
     document.getElementById("mainLSimg").src = document.getElementById("LSimg").getAttribute("src");
     document.getElementById("myModal").style.display = "none";
     document.getElementById("detailmodal").style.display = "none";
+    document.getElementById("notice1").style.opacity = "1";
+    setTimeout(function () {
+        document.getElementById("notice1").style.opacity = "0";
+    }, 5000)
 
     for (var i = 0; i < divsToHide.length; i++) {
-      divsToHide[i].style.display = "none";
+        divsToHide[i].style.display = "none";
     }
-    
+
 }
 
 function submitLSforever() {
@@ -144,15 +160,19 @@ function submitLSforever() {
     document.getElementById("mainLS").style.display = "none";
     document.getElementById("mainLSforever").style.display = "block";
     document.getElementById("mainjogger").style.display = "none";
-    document.getElementById("plusbtn").style.display = "none";  
+    document.getElementById("plusbtn").style.display = "none";
     document.getElementById("mainLSforeverimg").src = document.getElementById("LSforeverimg").getAttribute("src");
     document.getElementById("myModal").style.display = "none";
     document.getElementById("detailmodal").style.display = "none";
+    document.getElementById("notice1").style.opacity = "1";
+    setTimeout(function () {
+        document.getElementById("notice1").style.opacity = "0";
+    }, 5000)
 
     for (var i = 0; i < divsToHide.length; i++) {
-      divsToHide[i].style.display = "none";
+        divsToHide[i].style.display = "none";
     }
-    
+
 }
 
 function submitJogger() {
@@ -162,13 +182,17 @@ function submitJogger() {
     document.getElementById("mainLS").style.display = "none";
     document.getElementById("mainLSforever").style.display = "none";
     document.getElementById("mainjogger").style.display = "block";
-    document.getElementById("plusbtn").style.display = "none";  
+    document.getElementById("plusbtn").style.display = "none";
     document.getElementById("mainjoggerimg").src = document.getElementById("joggerimg").getAttribute("src");
     document.getElementById("myModal").style.display = "none";
     document.getElementById("detailmodal").style.display = "none";
+    document.getElementById("notice1").style.opacity = "1";
+    setTimeout(function () {
+        document.getElementById("notice1").style.opacity = "0";
+    }, 5000)
 
     for (var i = 0; i < divsToHide.length; i++) {
-      divsToHide[i].style.display = "none";
+        divsToHide[i].style.display = "none";
     }
-    
+
 }

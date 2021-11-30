@@ -92,7 +92,7 @@ slide7spinning.onended = function () {
     slide9spinning.play();
     slide7spinning.style.opacity = "0";
     slide9spinning.style.opacity = "1";
-    slide9spinning.setAttribute( "loop" , "" );
+    slide9spinning.setAttribute("loop", "");
     document.getElementById("confirmation").style.display = "block";
 
 }
@@ -124,5 +124,5 @@ slide11transition.onended = function () {
     slide11idle.play();
     slide11transition.style.opacity = "0";
     slide11idle.style.opacity = "1";
-    slide11idle.setAttribute("loop" , "");
+    slide11idle.setAttribute("loop", "");
 }

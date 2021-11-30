@@ -253,6 +253,10 @@
       document.getElementById("myModal2").style.display = "none";
       document.getElementById("detailmodal2").style.display = "none";
       document.getElementById("catalogue-finish-div").style.display = "block";
+      document.getElementById("notice2").style.opacity = "1";
+      setTimeout(function () {
+        document.getElementById("notice2").style.opacity = "0";
+      }, 5000)
 
       for (var i = 0; i < divsToHide.length; i++) {
         divsToHide[i].style.display = "none";
@@ -298,6 +302,10 @@
       document.getElementById("myModal2").style.display = "none";
       document.getElementById("detailmodal2").style.display = "none";
       document.getElementById("catalogue-finish-div").style.display = "block";
+      document.getElementById("notice2").style.opacity = "1";
+      setTimeout(function () {
+        document.getElementById("notice2").style.opacity = "0";
+      }, 5000)
 
       for (var i = 0; i < divsToHide.length; i++) {
         divsToHide[i].style.display = "none";
@@ -343,6 +351,10 @@
       document.getElementById("myModal2").style.display = "none";
       document.getElementById("detailmodal2").style.display = "none";
       document.getElementById("catalogue-finish-div").style.display = "block";
+      document.getElementById("notice2").style.opacity = "1";
+      setTimeout(function () {
+        document.getElementById("notice2").style.opacity = "0";
+      }, 5000)
 
       for (var i = 0; i < divsToHide.length; i++) {
         divsToHide[i].style.display = "none";
@@ -388,6 +400,10 @@
       document.getElementById("myModal2").style.display = "none";
       document.getElementById("detailmodal2").style.display = "none";
       document.getElementById("catalogue-finish-div").style.display = "block";
+      document.getElementById("notice2").style.opacity = "1";
+      setTimeout(function () {
+        document.getElementById("notice2").style.opacity = "0";
+      }, 5000)
 
       for (var i = 0; i < divsToHide.length; i++) {
         divsToHide[i].style.display = "none";
@@ -433,6 +449,10 @@
       document.getElementById("myModal2").style.display = "none";
       document.getElementById("detailmodal2").style.display = "none";
       document.getElementById("catalogue-finish-div").style.display = "block";
+      document.getElementById("notice2").style.opacity = "1";
+      setTimeout(function () {
+        document.getElementById("notice2").style.opacity = "0";
+      }, 5000)
 
       for (var i = 0; i < divsToHide.length; i++) {
         divsToHide[i].style.display = "none";
@@ -478,6 +498,10 @@
       document.getElementById("myModal2").style.display = "none";
       document.getElementById("detailmodal2").style.display = "none";
       document.getElementById("catalogue-finish-div").style.display = "block";
+      document.getElementById("notice2").style.opacity = "1";
+      setTimeout(function () {
+        document.getElementById("notice2").style.opacity = "0";
+      }, 5000)
 
       for (var i = 0; i < divsToHide.length; i++) {
         divsToHide[i].style.display = "none";
