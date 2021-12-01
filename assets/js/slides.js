@@ -32,9 +32,22 @@ slide2.onended = function () {
     slide3.play();
     slide2.style.opacity = "0";
     slide3.style.opacity = "1";
+    setTimeout(function(){
+        document.getElementById("text-scene-2-1").style.opacity = "1";
+        document.getElementById("text-scene-2-2").style.display = "block";
+        setTimeout(function(){
+            document.getElementById("text-scene-2-2").style.opacity = "1";
+            document.getElementById("text-scene-2-3").style.display = "block";
+        }, 2000)
+    }, 2000)
+    
 }
 
-slide3.onended = function () {
+slide3.onended = function () {    
+    document.getElementById("text-scene-2-2").style.opacity = "0";
+    setTimeout(function(){
+        document.getElementById("text-scene-2-3").style.opacity = "1";
+    }, 3000)
     slide3idle.play();
     slide3.style.opacity = "0";
     slide3idle.style.opacity = "1";
@@ -46,6 +59,9 @@ slide3.onended = function () {
 }
 
 slide3transition.onended = function () {
+    document.getElementById("text-scene-2-1").style.display = "none";
+    document.getElementById("text-scene-2-2").style.display = "none";
+    document.getElementById("text-scene-2-3").style.display = "none";
     slide4.play();
     slide3transition.style.opacity = "0";
     slide4.style.opacity = "1";
@@ -56,7 +72,18 @@ slide4.onended = function () {
     slide5.play();
     slide4.style.opacity = "0";
     slide5.style.opacity = "1";
-
+    document.getElementById("text-scene-3-1").style.display = "block";
+    setTimeout(function(){
+        document.getElementById("text-scene-3-1").style.opacity = "1";
+        setTimeout(function(){
+            document.getElementById("text-scene-3-2").style.display = "block";
+            document.getElementById("text-scene-3-1").style.opacity = "0";
+            setTimeout(function(){
+                document.getElementById("text-scene-3-2").style.opacity = "1";
+                document.getElementById("text-scene-3-1").style.display = "none";
+            },1000);
+        },3000);
+    },3000);
 }
 
 slide5.onended = function () {
@@ -71,10 +98,22 @@ slide5.onended = function () {
 }
 
 slide5transition.onended = function () {
+    document.getElementById("text-scene-3-1").style.display = "none";
+    document.getElementById("text-scene-3-2").style.display = "none";
     slide6.play();
     slide5transition.style.opacity = "0";
     slide6.style.opacity = "1";
-
+    document.getElementById("text-scene-4-1").style.display = "block";
+    setTimeout(function(){
+        document.getElementById("text-scene-4-1").style.opacity = "1";
+        setTimeout(function(){
+            document.getElementById("text-scene-4-2").style.display = "block";
+            document.getElementById("text-scene-4-1").style.opacity = "0";
+            setTimeout(function(){
+                document.getElementById("text-scene-4-2").style.opacity = "1";
+            },2000);
+        },5000);
+    },5000);
 }
 
 slide6.onended = function () {

@@ -14,18 +14,49 @@
     <meta name="author" content="Radinal - WIT>ID">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
 
     <button id="play-button" onclick="playvideo()"
         style="position: absolute; height: 100%; width: 100%; z-index: 9999; opacity: 0;"></button>
+    <div id="text-scene-1" class="text">
+        <p>Hello,</p>
+        <p>[Insert KOL Name]</p>
+    </div>
+    <div id="text-scene-1-2" class="text">
+        <p>
+            Welcome to<br>
+            a world full of<br>
+            color and joy!<br>
+        </p>
+    </div>
     <video id="scene-1" class="scene-1" style="opacity: 1;">
         <source src="assets/motion/01_INTRO.mp4" type="video/mp4" width="100%">
     </video>
+
+
     <video id="scene-2" class="scene scene-2">
         <source src="assets/motion/02_FOREST.mp4" type="video/mp4">
     </video>
+
+    <img id="text-scene-2-1" align="center" src="assets/CatchTheLove.png">
+    <div id="text-scene-2-2" class="text">
+        <p>
+            We would love to have you<br>
+            join us on our Catch The Love<br>
+            Fashion Show.<br>
+        </p>
+    </div>
+    <div id="text-scene-2-3" class="text">
+        <p>
+            Shhh!<br>
+            You'll be the first to see<br>
+            a preview of Chèrish 2022 collection.<br>
+
+        </p>
+    </div>
     <video id="scene-3" class="scene scene-3">
         <source src="assets/motion/03_FLOWER.mp4" type="video/mp4">
     </video>
@@ -42,6 +73,26 @@
     <video id="scene-4" class="scene scene-4">
         <source src="assets/motion/scene-4.mp4" type="video/mp4">
     </video>
+    <div id="text-scene-3-1" class="text">
+        <p>
+            The event will be held on:<br>
+            Saturday, December 18th, 2021 at<br>
+        </p>
+        <h1>
+            Mr. Moonlight
+        </h1>
+
+    </div>
+    <div id="text-scene-3-2" class="text">
+        <h1>
+            Mr. Moonlight
+        </h1>
+        <p>
+            Pajajaran Dalam 148 Street, Husen<br>
+            Sastranegara, Cicendo District,<br>
+            Bandung City, West Java 40174
+        </p>
+    </div>
     <video id="scene-5" class="scene scene-5">
         <source src="assets/motion/05_MRMOONLIGHT_INTRO.mp4" type="video/mp4">
     </video>
@@ -55,6 +106,25 @@
     <video id="scene-5-transition" class="scene scene-5">
         <source src="assets/motion/05_MRMOONLIGHT_TRANSITION.mp4" type="video/mp4">
     </video>
+    <div id="text-scene-4-1" class="text">
+        <p>
+            This invitation also comes with<br>
+            a complimentary one night stay at<br>
+        </p>
+        <h1>
+            Maja Family Hotels
+        </h1>
+
+    </div>
+    <div id="text-scene-4-2" class="text">
+        <h1>
+            Maja Family Hotels
+        </h1>
+        <p>
+            a leading hospitality concept<br>
+            which will make you enjoy!<br>
+        </p>
+    </div>
     <video id="scene-6" class="scene scene-6">
         <source src="assets/motion/7_JEMURAN.mp4" type="video/mp4">
     </video>
@@ -116,7 +186,7 @@
 
                     <div id="mainbasictees" class="basictees col py-5 col-6 product-card result">
 
-                        <img id="mainbasicteesimg" class="catalogue-list" src="assets/1.png">
+                        <img id="mainbasicteesimg" class="catalogue-list" src="assets/basictees/CORAL.png">
                         <p>
                             Basic Tees
                         </p>
@@ -124,7 +194,7 @@
                     </div>
                     <div id="maincrewneck" class="crewneck col py-5 col-6 product-card result">
 
-                        <img id="maincrewneckimg" class="catalogue-list" src="assets/2.png">
+                        <img id="maincrewneckimg" class="catalogue-list" src="assets/crewneck/COSTAL.png">
                         <p>
                             Crewneck Eco prod
                             & Dynemite
@@ -133,7 +203,7 @@
                     </div>
                     <div id="mainSS" class="SS col py-5 col-6 product-card result">
 
-                        <img id="mainSSimg" class="catalogue-list" src="assets/4.png">
+                        <img id="mainSSimg" class="catalogue-list" src="assets/SS/KISS.png">
                         <p>
                             SS (Forever Color
                             & CYC)
@@ -142,7 +212,7 @@
                     </div>
                     <div id="mainLS" class="LS col py-5 col-6 product-card result">
 
-                        <img id="mainLSimg" class="catalogue-list" src="assets/3.png">
+                        <img id="mainLSimg" class="catalogue-list" src="assets/LS/ICEY.png">
                         <p>
                             LS (Straight Pants) - CYC/NC
                         </p>
@@ -150,7 +220,7 @@
                     </div>
                     <div id="mainLSforever" class="LSforever col py-5 col-6 product-card result">
 
-                        <img id="mainLSforeverimg" class="catalogue-list" src="assets/5.png">
+                        <img id="mainLSforeverimg" class="catalogue-list" src="assets/LSforever/MOCHI.png">
                         <p>
                             LS (Jogger Pants) Forever/CYC
                         </p>
@@ -158,7 +228,7 @@
                     </div>
                     <div id="mainjogger" class="jogger col py-5 col-6 product-card result">
 
-                        <img id="mainjoggerimg" class="catalogue-list" src="assets/6.png">
+                        <img id="mainjoggerimg" class="catalogue-list" src="assets/jogger/COOKY.png">
                         <p>
                             Jogger Dynemite
                         </p>
@@ -178,7 +248,7 @@
                         <div class="row full" style="flex-direction: row;">
                             <a id="basictees" class="col py-5 col-6 product-card">
 
-                                <img class="catalogue-list" src="assets/1.png">
+                                <img class="catalogue-list" src="assets/basictees/LATTE.png">
                                 <p>
                                     Basic Tees
                                 </p>
@@ -186,7 +256,7 @@
                             </a>
                             <a id="crewneck" class="col py-5 col-6 product-card">
 
-                                <img class="catalogue-list" src="assets/2.png">
+                                <img class="catalogue-list" src="assets/crewneck/COSTAL.png">
                                 <p>
                                     Crewneck Eco prod
                                     & Dynemite
@@ -197,7 +267,7 @@
                         <div class="row full" style="flex-direction: row;">
                             <a id="SS" class="col py-5 col-6 product-card">
 
-                                <img class="catalogue-list" src="assets/4.png">
+                                <img class="catalogue-list" src="assets/SS/KISS.png">
                                 <p>
                                     SS (Forever Color
                                     & CYC)
@@ -206,7 +276,7 @@
                             </a>
                             <a id="LS" class="col py-5 col-6 product-card">
 
-                                <img class="catalogue-list" src="assets/3.png">
+                                <img class="catalogue-list" src="assets/LS/ICEY.png">
                                 <p>
                                     LS (Straight Pants) - CYC/NC
                                 </p>
@@ -216,7 +286,7 @@
                         <div class="row full" style="flex-direction: row;">
                             <a id="LSforever" class="col py-5 col-6 product-card">
 
-                                <img class="catalogue-list" src="assets/5.png">
+                                <img class="catalogue-list" src="assets/LSforever/MOCHI.png">
                                 <p>
                                     LS (Jogger Pants) Forever/CYC
                                 </p>
@@ -224,7 +294,7 @@
                             </a>
                             <a id="jogger" class="col py-5 col-6 product-card">
 
-                                <img class="catalogue-list" src="assets/6.png">
+                                <img class="catalogue-list" src="assets/jogger/COOKY.png">
                                 <p>
                                     Jogger Dynemite
                                 </p>
@@ -247,19 +317,19 @@
                     <div id="detailbasictees" class="detailcontent">
                         <div class="col py-5">
 
-                            <img id="basicteesimg" class="catalogue-detail" src="assets/1.png" data-set="">
+                            <img id="basicteesimg" class="catalogue-detail" src="assets/basictees/LATTE.png" value="">
 
                             <p class="detail-title">
                                 Basic Tees
                             </p>
 
                             <div class="size-button flex flex-row">
-                                <span>XS</span>
-                                <span>S</span>
-                                <span>M</span>
-                                <span>L</span>
-                                <span>XL</span>
-                                <span>XXL</span>
+                                <div id="sizeXS" class="sizebtns" data-size="XS">XS</div>
+                                <div id="sizeS" class="sizebtns" data-size="S">S</div>
+                                <div id="sizeM" class="sizebtns active" data-size="M">M</div>
+                                <div id="sizeL" class="sizebtns" data-size="L">L</div>
+                                <div id="sizeXL" class="sizebtns" data-size="XL">XL</div>
+                                <div id="sizeXXL" class="sizebtns" data-size="XXL">XXL</div>
                             </div>
 
                             <div class="color-button flex flex-row">
@@ -280,19 +350,18 @@
                     <div id="detailcrewneck" class="detailcontent">
                         <div class="col py-5">
 
-                            <img id="crewneckimg" class="catalogue-list" src="assets/2.png">
+                            <img id="crewneckimg" class="catalogue-list" src="assets/crewneck/COSTAL.png">
 
                             <p class="detail-title">
                                 Crewneck Eco prod & Dynemite
                             </p>
-
                             <div class="size-button flex flex-row">
-                                <span>XS</span>
-                                <span>S</span>
-                                <span>M</span>
-                                <span>L</span>
-                                <span>XL</span>
-                                <span>XXL</span>
+                                <div id="sizeXS" class="sizebtns" data-size="XS">XS</div>
+                                <div id="sizeS" class="sizebtns" data-size="S">S</div>
+                                <div id="sizeM" class="sizebtns active" data-size="M">M</div>
+                                <div id="sizeL" class="sizebtns" data-size="L">L</div>
+                                <div id="sizeXL" class="sizebtns" data-size="XL">XL</div>
+                                <div id="sizeXXL" class="sizebtns" data-size="XXL">XXL</div>
                             </div>
 
                             <div class="color-button flex flex-row">
@@ -311,20 +380,19 @@
                     <div id="detailSS" class="detailcontent">
                         <div class="col py-5">
 
-                            <img id="SSimg" class="catalogue-list" src="assets/4.png">
+                            <img id="SSimg" class="catalogue-list" src="assets/SS/KISS.png">
 
                             <p class="detail-title">
                                 SS (Forever Color
                                 & CYC)
                             </p>
-
                             <div class="size-button flex flex-row">
-                                <span>XS</span>
-                                <span>S</span>
-                                <span>M</span>
-                                <span>L</span>
-                                <span>XL</span>
-                                <span>XXL</span>
+                                <div id="sizeXS" class="sizebtns" data-size="XS">XS</div>
+                                <div id="sizeS" class="sizebtns" data-size="S">S</div>
+                                <div id="sizeM" class="sizebtns active" data-size="M">M</div>
+                                <div id="sizeL" class="sizebtns" data-size="L">L</div>
+                                <div id="sizeXL" class="sizebtns" data-size="XL">XL</div>
+                                <div id="sizeXXL" class="sizebtns" data-size="XXL">XXL</div>
                             </div>
 
                             <div class="color-button flex flex-row">
@@ -344,19 +412,18 @@
                     <div id="detailLS" class="detailcontent">
                         <div class="col py-5">
 
-                            <img id="LSimg" class="catalogue-list" src="assets/3.png">
+                            <img id="LSimg" class="catalogue-list" src="assets/LS/ICEY.png">
 
                             <p class="detail-title">
                                 LS (Straight Pants) - CYC/NC
                             </p>
-
                             <div class="size-button flex flex-row">
-                                <span>XS</span>
-                                <span>S</span>
-                                <span>M</span>
-                                <span>L</span>
-                                <span>XL</span>
-                                <span>XXL</span>
+                                <div id="sizeXS" class="sizebtns" data-size="XS">XS</div>
+                                <div id="sizeS" class="sizebtns" data-size="S">S</div>
+                                <div id="sizeM" class="sizebtns active" data-size="M">M</div>
+                                <div id="sizeL" class="sizebtns" data-size="L">L</div>
+                                <div id="sizeXL" class="sizebtns" data-size="XL">XL</div>
+                                <div id="sizeXXL" class="sizebtns" data-size="XXL">XXL</div>
                             </div>
 
                             <div class="color-button flex flex-row">
@@ -376,19 +443,18 @@
                     <div id="detailLSforever" class="detailcontent">
                         <div class="col py-5">
 
-                            <img id="LSforeverimg" class="catalogue-list" src="assets/5.png">
+                            <img id="LSforeverimg" class="catalogue-list" src="assets/LSforever/MOCHI.png">
 
                             <p class="detail-title">
                                 LS (Jogger Pants) Forever/CYC
                             </p>
-
                             <div class="size-button flex flex-row">
-                                <span>XS</span>
-                                <span>S</span>
-                                <span>M</span>
-                                <span>L</span>
-                                <span>XL</span>
-                                <span>XXL</span>
+                                <div id="sizeXS" class="sizebtns" data-size="XS">XS</div>
+                                <div id="sizeS" class="sizebtns" data-size="S">S</div>
+                                <div id="sizeM" class="sizebtns active" data-size="M">M</div>
+                                <div id="sizeL" class="sizebtns" data-size="L">L</div>
+                                <div id="sizeXL" class="sizebtns" data-size="XL">XL</div>
+                                <div id="sizeXXL" class="sizebtns" data-size="XXL">XXL</div>
                             </div>
 
                             <div class="color-button flex flex-row">
@@ -409,19 +475,18 @@
                     <div id="detailjogger" class="detailcontent">
                         <div class="col py-5">
 
-                            <img id="joggerimg" class="catalogue-list" src="assets/6.png">
+                            <img id="joggerimg" class="catalogue-list" src="assets/jogger/COOKY.png">
 
                             <p class="detail-title">
                                 Jogger Dynemite
                             </p>
-
                             <div class="size-button flex flex-row">
-                                <span>XS</span>
-                                <span>S</span>
-                                <span>M</span>
-                                <span>L</span>
-                                <span>XL</span>
-                                <span>XXL</span>
+                                <div id="sizeXS" class="sizebtns" data-size="XS">XS</div>
+                                <div id="sizeS" class="sizebtns" data-size="S">S</div>
+                                <div id="sizeM" class="sizebtns active" data-size="M">M</div>
+                                <div id="sizeL" class="sizebtns" data-size="L">L</div>
+                                <div id="sizeXL" class="sizebtns" data-size="XL">XL</div>
+                                <div id="sizeXXL" class="sizebtns" data-size="XXL">XXL</div>
                             </div>
 
                             <div class="color-button flex flex-row">
@@ -457,7 +522,7 @@
 
                     <div id="mainbasictees2" class="basictees col py-5 col-6 product-card result2">
 
-                        <img id="mainbasictees2img" class="catalogue-list" src="assets/1.png">
+                        <img id="mainbasictees2img" class="catalogue-list" src="assets/basictees/LATTE.png">
                         <p>
                             Basic Tees
                         </p>
@@ -465,7 +530,7 @@
                     </div>
                     <div id="maincrewneck2" class="crewneck col py-5 col-6 product-card result2">
 
-                        <img id="maincrewneck2img" class="catalogue-list" src="assets/2.png">
+                        <img id="maincrewneck2img" class="catalogue-list" src="assets/crewneck/COSTAL.png">
                         <p>
                             Crewneck Eco prod
                             & Dynemite
@@ -474,7 +539,7 @@
                     </div>
                     <div id="mainSS2" class="SS col py-5 col-6 product-card result2">
 
-                        <img id="mainSS2img" class="catalogue-list" src="assets/4.png">
+                        <img id="mainSS2img" class="catalogue-list" src="assets/SS/KISS.png">
                         <p>
                             SS (Forever Color
                             & CYC)
@@ -483,7 +548,7 @@
                     </div>
                     <div id="mainLS2" class="LS col py-5 col-6 product-card result2">
 
-                        <img id="mainLS2img" class="catalogue-list" src="assets/3.png">
+                        <img id="mainLS2img" class="catalogue-list" src="assets/LS/ICEY.png">
                         <p>
                             LS (Straight Pants) - CYC/NC
                         </p>
@@ -491,7 +556,7 @@
                     </div>
                     <div id="mainLSforever2" class="LSforever col py-5 col-6 product-card result2">
 
-                        <img id="mainLSforever2img" class="catalogue-list" src="assets/5.png">
+                        <img id="mainLSforever2img" class="catalogue-list" src="assets/LSforever/MOCHI.png">
                         <p>
                             LS (Jogger Pants) Forever/CYC
                         </p>
@@ -499,7 +564,7 @@
                     </div>
                     <div id="mainjogger2" class="jogger col py-5 col-6 product-card result2">
 
-                        <img id="mainjogger2img" class="catalogue-list" src="assets/6.png">
+                        <img id="mainjogger2img" class="catalogue-list" src="assets/jogger/COOKY.png">
                         <p>
                             Jogger Dynemite
                         </p>
@@ -519,7 +584,7 @@
                         <div class="row full" style="flex-direction: row;">
                             <a id="basictees2" class="col py-5 col-6 product-card">
 
-                                <img class="catalogue-list" src="assets/1.png">
+                                <img class="catalogue-list" src="assets/basictees/LATTE.png">
                                 <p>
                                     Basic Tees
                                 </p>
@@ -527,7 +592,7 @@
                             </a>
                             <a id="crewneck2" class="col py-5 col-6 product-card">
 
-                                <img class="catalogue-list" src="assets/2.png">
+                                <img class="catalogue-list" src="assets/crewneck/COSTAL.png">
                                 <p>
                                     Crewneck Eco prod
                                     & Dynemite
@@ -538,7 +603,7 @@
                         <div class="row full" style="flex-direction: row;">
                             <a id="SS2" class="col py-5 col-6 product-card">
 
-                                <img class="catalogue-list" src="assets/4.png">
+                                <img class="catalogue-list" src="assets/SS/KISS.png">
                                 <p>
                                     SS (Forever Color
                                     & CYC)
@@ -547,7 +612,7 @@
                             </a>
                             <a id="LS2" class="col py-5 col-6 product-card">
 
-                                <img class="catalogue-list" src="assets/3.png">
+                                <img class="catalogue-list" src="assets/LS/ICEY.png">
                                 <p>
                                     LS (Straight Pants) - CYC/NC
                                 </p>
@@ -557,7 +622,7 @@
                         <div class="row full" style="flex-direction: row;">
                             <a id="LSforever2" class="col py-5 col-6 product-card">
 
-                                <img class="catalogue-list" src="assets/5.png">
+                                <img class="catalogue-list" src="assets/LSforever/MOCHI.png">
                                 <p>
                                     LS (Jogger Pants) Forever/CYC
                                 </p>
@@ -565,7 +630,7 @@
                             </a>
                             <a id="jogger2" class="col py-5 col-6 product-card">
 
-                                <img class="catalogue-list" src="assets/6.png">
+                                <img class="catalogue-list" src="assets/jogger/COOKY.png">
                                 <p>
                                     Jogger Dynemite
                                 </p>
@@ -588,19 +653,18 @@
                     <div id="detailbasictees2" class="detailcontent">
                         <div class="col py-5">
 
-                            <img id="basictees2img" class="catalogue-detail" src="assets/1.png" data-set="">
+                            <img id="basictees2img" class="catalogue-detail" src="assets/basictees/LATTE.png">
 
                             <p class="detail-title">
                                 Basic Tees
                             </p>
-
                             <div class="size-button flex flex-row">
-                                <span>XS</span>
-                                <span>S</span>
-                                <span>M</span>
-                                <span>L</span>
-                                <span>XL</span>
-                                <span>XXL</span>
+                                <div id="sizeXS" class="sizebtns2" data-size="XS">XS</div>
+                                <div id="sizeS" class="sizebtns2" data-size="S">S</div>
+                                <div id="sizeM" class="sizebtns2 active" data-size="M">M</div>
+                                <div id="sizeL" class="sizebtns2" data-size="L">L</div>
+                                <div id="sizeXL" class="sizebtns2" data-size="XL">XL</div>
+                                <div id="sizeXXL" class="sizebtns2" data-size="XXL">XXL</div>
                             </div>
 
                             <div class="color-button flex flex-row">
@@ -621,19 +685,18 @@
                     <div id="detailcrewneck2" class="detailcontent">
                         <div class="col py-5">
 
-                            <img id="crewneck2img" class="catalogue-list" src="assets/2.png">
+                            <img id="crewneck2img" class="catalogue-list" src="assets/crewneck/COSTAL.png">
 
                             <p class="detail-title">
                                 Crewneck Eco prod & Dynemite
                             </p>
-
                             <div class="size-button flex flex-row">
-                                <span>XS</span>
-                                <span>S</span>
-                                <span>M</span>
-                                <span>L</span>
-                                <span>XL</span>
-                                <span>XXL</span>
+                                <div id="sizeXS" class="sizebtns2" data-size="XS">XS</div>
+                                <div id="sizeS" class="sizebtns2" data-size="S">S</div>
+                                <div id="sizeM" class="sizebtns2 active" data-size="M">M</div>
+                                <div id="sizeL" class="sizebtns2" data-size="L">L</div>
+                                <div id="sizeXL" class="sizebtns2" data-size="XL">XL</div>
+                                <div id="sizeXXL" class="sizebtns2" data-size="XXL">XXL</div>
                             </div>
 
                             <div class="color-button flex flex-row">
@@ -652,20 +715,19 @@
                     <div id="detailSS2" class="detailcontent">
                         <div class="col py-5">
 
-                            <img id="SS2img" class="catalogue-list" src="assets/4.png">
+                            <img id="SS2img" class="catalogue-list" src="assets/SS/KISS.png">
 
                             <p class="detail-title">
                                 SS (Forever Color
                                 & CYC)
                             </p>
-
                             <div class="size-button flex flex-row">
-                                <span>XS</span>
-                                <span>S</span>
-                                <span>M</span>
-                                <span>L</span>
-                                <span>XL</span>
-                                <span>XXL</span>
+                                <div id="sizeXS" class="sizebtns2" data-size="XS">XS</div>
+                                <div id="sizeS" class="sizebtns2" data-size="S">S</div>
+                                <div id="sizeM" class="sizebtns2 active" data-size="M">M</div>
+                                <div id="sizeL" class="sizebtns2" data-size="L">L</div>
+                                <div id="sizeXL" class="sizebtns2" data-size="XL">XL</div>
+                                <div id="sizeXXL" class="sizebtns2" data-size="XXL">XXL</div>
                             </div>
 
                             <div class="color-button flex flex-row">
@@ -685,19 +747,18 @@
                     <div id="detailLS2" class="detailcontent">
                         <div class="col py-5">
 
-                            <img id="LS2img" class="catalogue-list" src="assets/3.png">
+                            <img id="LS2img" class="catalogue-list" src="assets/LS/ICEY.png">
 
                             <p class="detail-title">
                                 LS (Straight Pants) - CYC/NC
                             </p>
-
                             <div class="size-button flex flex-row">
-                                <span>XS</span>
-                                <span>S</span>
-                                <span>M</span>
-                                <span>L</span>
-                                <span>XL</span>
-                                <span>XXL</span>
+                                <div id="sizeXS" class="sizebtns2" data-size="XS">XS</div>
+                                <div id="sizeS" class="sizebtns2" data-size="S">S</div>
+                                <div id="sizeM" class="sizebtns2 active" data-size="M">M</div>
+                                <div id="sizeL" class="sizebtns2" data-size="L">L</div>
+                                <div id="sizeXL" class="sizebtns2" data-size="XL">XL</div>
+                                <div id="sizeXXL" class="sizebtns2" data-size="XXL">XXL</div>
                             </div>
 
                             <div class="color-button flex flex-row">
@@ -717,19 +778,18 @@
                     <div id="detailLSforever2" class="detailcontent">
                         <div class="col py-5">
 
-                            <img id="LSforever2img" class="catalogue-list" src="assets/5.png">
+                            <img id="LSforever2img" class="catalogue-list" src="assets/LSforever/MOCHI.png">
 
                             <p class="detail-title">
                                 LS (Jogger Pants) Forever/CYC
                             </p>
-
                             <div class="size-button flex flex-row">
-                                <span>XS</span>
-                                <span>S</span>
-                                <span>M</span>
-                                <span>L</span>
-                                <span>XL</span>
-                                <span>XXL</span>
+                                <div id="sizeXS" class="sizebtns2" data-size="XS">XS</div>
+                                <div id="sizeS" class="sizebtns2" data-size="S">S</div>
+                                <div id="sizeM" class="sizebtns2 active" data-size="M">M</div>
+                                <div id="sizeL" class="sizebtns2" data-size="L">L</div>
+                                <div id="sizeXL" class="sizebtns2" data-size="XL">XL</div>
+                                <div id="sizeXXL" class="sizebtns2" data-size="XXL">XXL</div>
                             </div>
 
                             <div class="color-button flex flex-row">
@@ -750,19 +810,18 @@
                     <div id="detailjogger2" class="detailcontent">
                         <div class="col py-5">
 
-                            <img id="jogger2img" class="catalogue-list" src="assets/6.png">
+                            <img id="jogger2img" class="catalogue-list" src="assets/jogger/COOKY.png">
 
                             <p class="detail-title">
                                 Jogger Dynemite
                             </p>
-
                             <div class="size-button flex flex-row">
-                                <span>XS</span>
-                                <span>S</span>
-                                <span>M</span>
-                                <span>L</span>
-                                <span>XL</span>
-                                <span>XXL</span>
+                                <div id="sizeXS" class="sizebtns2" data-size="XS">XS</div>
+                                <div id="sizeS" class="sizebtns2" data-size="S">S</div>
+                                <div id="sizeM" class="sizebtns2 active" data-size="M">M</div>
+                                <div id="sizeL" class="sizebtns2" data-size="L">L</div>
+                                <div id="sizeXL" class="sizebtns2" data-size="XL">XL</div>
+                                <div id="sizeXXL" class="sizebtns2" data-size="XXL">XXL</div>
                             </div>
 
                             <div class="color-button flex flex-row">
@@ -801,6 +860,30 @@
 
     </section>
 
+    <img id="QR" src="assets/QR/TEST.png">
+    
+    <div id="text-scene-email-1" class="text">
+        <p>
+            We really appreciate your support!
+        </p>
+    </div>
+
+    <div id="text-scene-email-2" class="text">
+        <p>
+            Please screenshot this barcode and show <br>
+            it when registering at the venue later.
+        </p>
+        <form>
+            <input id="firstset" type="hidden" value="">
+            <input id="firstsetsize" type="hidden" value="">
+            <input id="secondset" type="hidden" value="">
+            <input id="secondsetsize" type="hidden" value="">
+            <div class="flex email">
+                <input id="email" type="email" placeholder="Email">
+                <input id="submitform" type="submit" value="Send QR Code">
+            </div>
+        </form>
+    </div>
 
     <video id="scene-10" class="scene scene-10">
         <source src="assets/motion/10_BARCODE_INTRO.mp4" type="video/mp4">
@@ -821,6 +904,23 @@
     <video id="scene-11-idle" class="scene scene-11">
         <source src="assets/motion/11_OUTRO_IDLE.mp4" type="video/mp4">
     </video>
+
+    <script>
+        $(document).ready(function () {
+            $('.sizebtns').click(function () {
+                $('.sizebtns.active').removeClass("active");
+                $(this).addClass("active");
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.sizebtns2').click(function () {
+                $('.sizebtns2.active').removeClass("active");
+                $(this).addClass("active");
+            });
+        });
+    </script>
 
     <script src="assets/js/buttons.js"></script>
     <script src="assets/js/slides.js"></script>

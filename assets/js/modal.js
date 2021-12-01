@@ -1,3 +1,31 @@
+    // Reference the size
+    const size = document.getElementById("firstsetsize");
+
+    // Click on a size
+    var siz = document.getElementsByClassName("sizebtns");
+    for (var i = 0; i < siz.length; i++) {
+      siz[i].onclick = changeVal;
+    }
+
+    function changeVal(e) {
+      let sizeval = e.target.getAttribute("data-size");
+      size.value = sizeval;
+    }
+
+    // Reference the size
+    const size2 = document.getElementById("secondsetsize");
+
+    // Click on a size
+    var siz2 = document.getElementsByClassName("sizebtns2");
+    for (var i = 0; i < siz2.length; i++) {
+      siz2[i].onclick = changeVal2;
+    }
+
+    function changeVal2(e) {
+      let sizeval2 = e.target.getAttribute("data-size");
+      size2.value = sizeval2;
+    }
+
     // Get the modal
     var modal = document.getElementById("myModal");
     var modalcontent = document.getElementById("myModalContent");
@@ -96,6 +124,34 @@
       image.src = imgsrc;
     }
 
+    function submitBasicTees() {
+      document.getElementById("mainbasictees").style.display = "block";
+      document.getElementById("maincrewneck").style.display = "none";
+      document.getElementById("mainSS").style.display = "none";
+      document.getElementById("mainLS").style.display = "none";
+      document.getElementById("mainLSforever").style.display = "none";
+      document.getElementById("mainjogger").style.display = "none";
+      document.getElementById("plusbtn").style.display = "none";
+      document.getElementById("mainbasicteesimg").src = document.getElementById("basicteesimg").getAttribute("src");
+
+      let remslash = document.getElementById("basicteesimg").getAttribute("src").slice(7, 50).replace('.png', '').replace('/', '-');
+      document.getElementById("firstset").value = remslash;
+
+      document.getElementById("myModal").style.display = "none";
+      document.getElementById("detailmodal").style.display = "none";
+
+      document.getElementById("notice1").style.opacity = "1";
+      document.getElementById("notice1").style.zIndex = "999";
+      setTimeout(function () {
+        document.getElementById("notice1").style.opacity = "0";
+      }, 5000)
+
+      for (var i = 0; i < divsToHide.length; i++) {
+        divsToHide[i].style.display = "none";
+      }
+
+    }
+
     // CREWNECK
 
     const image2 = document.getElementById("crewneckimg");
@@ -110,6 +166,34 @@
       let imgsrc2 = e.target.getAttribute("data-img");
       // set the src
       image2.src = imgsrc2;
+    }
+
+    function submitCrewNeck() {
+      document.getElementById("mainbasictees").style.display = "none";
+      document.getElementById("maincrewneck").style.display = "block";
+      document.getElementById("mainSS").style.display = "none";
+      document.getElementById("mainLS").style.display = "none";
+      document.getElementById("mainLSforever").style.display = "none";
+      document.getElementById("mainjogger").style.display = "none";
+      document.getElementById("plusbtn").style.display = "none";
+      document.getElementById("maincrewneckimg").src = document.getElementById("crewneckimg").getAttribute("src");
+
+      let remslash = document.getElementById("crewneckimg").getAttribute("src").slice(7, 50).replace('.png', '').replace('/', '-');
+      document.getElementById("firstset").value = remslash;
+
+      document.getElementById("myModal").style.display = "none";
+      document.getElementById("detailmodal").style.display = "none";
+
+      document.getElementById("notice1").style.opacity = "1";
+      document.getElementById("notice1").style.zIndex = "999";
+      setTimeout(function () {
+        document.getElementById("notice1").style.opacity = "0";
+      }, 5000)
+
+      for (var i = 0; i < divsToHide.length; i++) {
+        divsToHide[i].style.display = "none";
+      }
+
     }
 
     // SS
@@ -128,6 +212,34 @@
       image3.src = imgsrc3;
     }
 
+    function submitSS() {
+      document.getElementById("mainbasictees").style.display = "none";
+      document.getElementById("maincrewneck").style.display = "none";
+      document.getElementById("mainSS").style.display = "block";
+      document.getElementById("mainLS").style.display = "none";
+      document.getElementById("mainLSforever").style.display = "none";
+      document.getElementById("mainjogger").style.display = "none";
+      document.getElementById("plusbtn").style.display = "none";
+      document.getElementById("mainSSimg").src = document.getElementById("SSimg").getAttribute("src");
+
+      let remslash = document.getElementById("SSimg").getAttribute("src").slice(7, 50).replace('.png', '').replace('/', '-');
+      document.getElementById("firstset").value = remslash;
+
+      document.getElementById("myModal").style.display = "none";
+      document.getElementById("detailmodal").style.display = "none";
+
+      document.getElementById("notice1").style.opacity = "1";
+      document.getElementById("notice1").style.zIndex = "999";
+      setTimeout(function () {
+        document.getElementById("notice1").style.opacity = "0";
+      }, 5000)
+
+      for (var i = 0; i < divsToHide.length; i++) {
+        divsToHide[i].style.display = "none";
+      }
+
+    }
+
     // LS
 
     const image4 = document.getElementById("LSimg");
@@ -142,6 +254,34 @@
       let imgsrc4 = e.target.getAttribute("data-img");
       // set the src
       image4.src = imgsrc4;
+    }
+
+    function submitLS() {
+      document.getElementById("mainbasictees").style.display = "none";
+      document.getElementById("maincrewneck").style.display = "none";
+      document.getElementById("mainSS").style.display = "none";
+      document.getElementById("mainLS").style.display = "block";
+      document.getElementById("mainLSforever").style.display = "none";
+      document.getElementById("mainjogger").style.display = "none";
+      document.getElementById("plusbtn").style.display = "none";
+      document.getElementById("mainLSimg").src = document.getElementById("LSimg").getAttribute("src");
+
+      let remslash = document.getElementById("LSimg").getAttribute("src").slice(7, 50).replace('.png', '').replace('/', '-');
+      document.getElementById("firstset").value = remslash;
+
+      document.getElementById("myModal").style.display = "none";
+      document.getElementById("detailmodal").style.display = "none";
+
+      document.getElementById("notice1").style.opacity = "1";
+      document.getElementById("notice1").style.zIndex = "999";
+      setTimeout(function () {
+        document.getElementById("notice1").style.opacity = "0";
+      }, 5000)
+
+      for (var i = 0; i < divsToHide.length; i++) {
+        divsToHide[i].style.display = "none";
+      }
+
     }
 
     // LSforever
@@ -160,6 +300,34 @@
       image5.src = imgsrc5;
     }
 
+    function submitLSforever() {
+      document.getElementById("mainbasictees").style.display = "none";
+      document.getElementById("maincrewneck").style.display = "none";
+      document.getElementById("mainSS").style.display = "none";
+      document.getElementById("mainLS").style.display = "none";
+      document.getElementById("mainLSforever").style.display = "block";
+      document.getElementById("mainjogger").style.display = "none";
+      document.getElementById("plusbtn").style.display = "none";
+      document.getElementById("mainLSforeverimg").src = document.getElementById("LSforeverimg").getAttribute("src");
+
+      let remslash = document.getElementById("LSforeverimg").getAttribute("src").slice(7, 50).replace('.png', '').replace('/', '-');
+      document.getElementById("firstset").value = remslash;
+
+      document.getElementById("myModal").style.display = "none";
+      document.getElementById("detailmodal").style.display = "none";
+
+      document.getElementById("notice1").style.opacity = "1";
+      document.getElementById("notice1").style.zIndex = "999";
+      setTimeout(function () {
+        document.getElementById("notice1").style.opacity = "0";
+      }, 5000)
+
+      for (var i = 0; i < divsToHide.length; i++) {
+        divsToHide[i].style.display = "none";
+      }
+
+    }
+
     // Jogger
 
     const image6 = document.getElementById("joggerimg");
@@ -174,6 +342,34 @@
       let imgsrc6 = e.target.getAttribute("data-img");
       // set the src
       image6.src = imgsrc6;
+    }
+
+    function submitJogger() {
+      document.getElementById("mainbasictees").style.display = "none";
+      document.getElementById("maincrewneck").style.display = "none";
+      document.getElementById("mainSS").style.display = "none";
+      document.getElementById("mainLS").style.display = "none";
+      document.getElementById("mainLSforever").style.display = "none";
+      document.getElementById("mainjogger").style.display = "block";
+      document.getElementById("plusbtn").style.display = "none";
+      document.getElementById("mainjoggerimg").src = document.getElementById("joggerimg").getAttribute("src");
+
+      let remslash = document.getElementById("joggerimg").getAttribute("src").slice(7, 50).replace('.png', '').replace('/', '-');
+      document.getElementById("firstset").value = remslash;
+
+      document.getElementById("myModal").style.display = "none";
+      document.getElementById("detailmodal").style.display = "none";
+
+      document.getElementById("notice1").style.opacity = "1";
+      document.getElementById("notice1").style.zIndex = "999";
+      setTimeout(function () {
+        document.getElementById("notice1").style.opacity = "0";
+      }, 5000)
+
+      for (var i = 0; i < divsToHide.length; i++) {
+        divsToHide[i].style.display = "none";
+      }
+
     }
 
     // Get the modal2
@@ -250,10 +446,15 @@
       document.getElementById("mainjogger2").style.display = "none";
       document.getElementById("plusbtn2").style.display = "none";
       document.getElementById("mainbasictees2img").src = document.getElementById("basictees2img").getAttribute("src");
+
+      let remslash2 = document.getElementById("basictees2img").getAttribute("src").slice(7, 50).replace('.png', '').replace('/', '-');
+      document.getElementById("secondset").value = remslash2;
+
       document.getElementById("myModal2").style.display = "none";
       document.getElementById("detailmodal2").style.display = "none";
       document.getElementById("catalogue-finish-div").style.display = "block";
       document.getElementById("notice2").style.opacity = "1";
+      document.getElementById("notice2").style.zIndex = "99";
       setTimeout(function () {
         document.getElementById("notice2").style.opacity = "0";
       }, 5000)
@@ -299,10 +500,15 @@
       document.getElementById("mainjogger2").style.display = "none";
       document.getElementById("plusbtn2").style.display = "none";
       document.getElementById("maincrewneck2img").src = document.getElementById("crewneck2img").getAttribute("src");
+
+      let remslash2 = document.getElementById("crewneck2img").getAttribute("src").slice(7, 50).replace('.png', '').replace('/', '-');
+      document.getElementById("secondset").value = remslash2;
+
       document.getElementById("myModal2").style.display = "none";
       document.getElementById("detailmodal2").style.display = "none";
       document.getElementById("catalogue-finish-div").style.display = "block";
       document.getElementById("notice2").style.opacity = "1";
+      document.getElementById("notice2").style.zIndex = "99";
       setTimeout(function () {
         document.getElementById("notice2").style.opacity = "0";
       }, 5000)
@@ -348,10 +554,15 @@
       document.getElementById("mainjogger2").style.display = "none";
       document.getElementById("plusbtn2").style.display = "none";
       document.getElementById("mainSS2img").src = document.getElementById("SS2img").getAttribute("src");
+
+      let remslash2 = document.getElementById("SS2img").getAttribute("src").slice(7, 50).replace('.png', '').replace('/', '-');
+      document.getElementById("secondset").value = remslash2;
+
       document.getElementById("myModal2").style.display = "none";
       document.getElementById("detailmodal2").style.display = "none";
       document.getElementById("catalogue-finish-div").style.display = "block";
       document.getElementById("notice2").style.opacity = "1";
+      document.getElementById("notice2").style.zIndex = "99";
       setTimeout(function () {
         document.getElementById("notice2").style.opacity = "0";
       }, 5000)
@@ -397,10 +608,15 @@
       document.getElementById("mainjogger2").style.display = "none";
       document.getElementById("plusbtn2").style.display = "none";
       document.getElementById("mainLS2img").src = document.getElementById("LS2img").getAttribute("src");
+
+      let remslash2 = document.getElementById("LS2img").getAttribute("src").slice(7, 50).replace('.png', '').replace('/', '-');
+      document.getElementById("secondset").value = remslash2;
+
       document.getElementById("myModal2").style.display = "none";
       document.getElementById("detailmodal2").style.display = "none";
       document.getElementById("catalogue-finish-div").style.display = "block";
       document.getElementById("notice2").style.opacity = "1";
+      document.getElementById("notice2").style.zIndex = "99";
       setTimeout(function () {
         document.getElementById("notice2").style.opacity = "0";
       }, 5000)
@@ -446,10 +662,15 @@
       document.getElementById("mainjogger2").style.display = "none";
       document.getElementById("plusbtn2").style.display = "none";
       document.getElementById("mainLSforever2img").src = document.getElementById("LSforever2img").getAttribute("src");
+
+      let remslash2 = document.getElementById("LSforever2img").getAttribute("src").slice(7, 50).replace('.png', '').replace('/', '-');
+      document.getElementById("secondset").value = remslash2;
+
       document.getElementById("myModal2").style.display = "none";
       document.getElementById("detailmodal2").style.display = "none";
       document.getElementById("catalogue-finish-div").style.display = "block";
       document.getElementById("notice2").style.opacity = "1";
+      document.getElementById("notice2").style.zIndex = "99";
       setTimeout(function () {
         document.getElementById("notice2").style.opacity = "0";
       }, 5000)
@@ -495,10 +716,15 @@
       document.getElementById("mainLSforever2").style.display = "none";
       document.getElementById("plusbtn2").style.display = "none";
       document.getElementById("mainjogger2img").src = document.getElementById("jogger2img").getAttribute("src");
+
+      let remslash2 = document.getElementById("jogger2img").getAttribute("src").slice(7, 50).replace('.png', '').replace('/', '-');
+      document.getElementById("secondset").value = remslash2;
+
       document.getElementById("myModal2").style.display = "none";
       document.getElementById("detailmodal2").style.display = "none";
       document.getElementById("catalogue-finish-div").style.display = "block";
       document.getElementById("notice2").style.opacity = "1";
+      document.getElementById("notice2").style.zIndex = "99";
       setTimeout(function () {
         document.getElementById("notice2").style.opacity = "0";
       }, 5000)
